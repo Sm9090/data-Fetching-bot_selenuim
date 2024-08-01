@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-async function main() {
+ async function Collection() {
   const dataDir = path.join(__dirname, 'data');  // Directory containing HTML files
 
   // Initialize Selenium WebDriver
@@ -68,4 +68,4 @@ async function main() {
   await csvWriter.writeRecords(records);
 }
 
-main();
+module.exports = { Collection };

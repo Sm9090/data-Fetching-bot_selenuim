@@ -2,6 +2,7 @@ const { Builder, By, Key, until } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const fs = require('fs');
 const path = require('path');
+const {Collection} = require('./collection');
 
 async function example() {
   let driver = await new Builder()
@@ -71,6 +72,7 @@ async function example() {
   } finally {
     // Close the browser
     await driver.quit();
+    await Collection()
   }
 }
 
